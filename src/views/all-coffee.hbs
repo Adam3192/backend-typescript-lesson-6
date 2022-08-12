@@ -1,0 +1,15 @@
+<h1>List of Coffee Items</h1>
+<ul>
+    {{#each coffeeList}}
+    <li>
+        {{name}} | {{price}}
+        <a href="/coffee/{{coffeeId}}">View Details</a>
+        <a href="/coffee/edit/{{coffeeId}}">Edit Details</a>
+        <form action="/coffee/delete/{{coffeeId}}" method="POST">
+            <button type="submit">Delete Item</button>
+        </form>
+    </li>
+    {{/each}}
+</ul>
+</br>
+<a href="/coffee/add">Add New Item</a>

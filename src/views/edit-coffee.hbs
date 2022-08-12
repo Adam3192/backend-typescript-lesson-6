@@ -1,0 +1,18 @@
+<h1>Edit a Coffee Item</h1>
+{{#with foundCoffee}}
+<form action='/coffee/edit/{{coffeeId}}' method="POST">
+    <label for="name">Enter Item Name: </label>
+    <input type="text" name="name" placeholder="Enter Name"
+        value="{{name}}"/><br>
+
+    <label for="description">Enter Item Description: </label>
+    <input type="text" name="description" placeholder="Enter Description"
+        value="{{description}}" /><br>
+
+    <label for="price">Enter Item Price: </label>
+    <input type="text" name="price" placeholder="Enter Price"
+        value="{{price}}" /><br>
+
+    <button type="submit">Edit Item</button>
+</form>
+{{/with}}
